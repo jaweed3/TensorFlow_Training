@@ -17,4 +17,4 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=3, validation_split=0.1)
 
-model.save("saved_model/")
+model.save("saved_model/MNIST.keras")
