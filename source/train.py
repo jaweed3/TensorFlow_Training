@@ -18,7 +18,7 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=3, validation_split=0.1)
 
-model_dir = "/saved_model/"
+model_dir = os.path.join(os.getcwd(), 'saved_model')
 os.makedirs(model_dir, exist_ok=True)
 
-model.save("/saved_model/MNIST.keras")
+model.save(os.path.join(model_dir, "MNIST.keras"))
