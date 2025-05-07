@@ -1,4 +1,5 @@
 # src/train.py
+import os
 import tensorflow as tf
 from tensorflow.keras.datasets import mnist
 
@@ -17,4 +18,7 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=3, validation_split=0.1)
 
-model.save("saved_model/MNIST.keras")
+model_dir = "/saved_model/"
+os.makedirs(model_dir, exist_ok=True)
+
+model.save("/saved_model/MNIST.keras")
