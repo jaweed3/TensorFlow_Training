@@ -9,7 +9,7 @@ import sys
 (_, _), (x_test, y_test) = mnist.load_data()
 x_test = x_test / 255.0
 
-model = tf.keras.models.load_model("saved_model/")
+model = tf.keras.models.load_model("saved_model/MNIST.keras")
 preds = model.predict(x_test)
 y_pred = np.argmax(preds, axis=1)
 
